@@ -25,7 +25,7 @@ df0.index = blankIndex
 print(df0)
 print("\n")
 print("\n")
-
+print("\n")
 
 # Der Umsatz für das Jahr 2020
 totalWert0 = df0["UmsatzInEuro(Online2020)"].sum()

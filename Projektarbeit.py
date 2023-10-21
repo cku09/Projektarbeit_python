@@ -87,7 +87,7 @@ print("\n")
 
 
 
-# Der Umsatz für das Jahr 2022
+# Der Umsatz für das ganze Jahr 2022
 totalWert2 = df2["UmsatzInEuro(Online2022)"].sum()
 totalWert2 = round(totalWert2, 2)
 print("Der Umsatz für das Jahr 2022 beträgt: " + str(totalWert2) + " Euro")

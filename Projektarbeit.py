@@ -272,3 +272,14 @@ plt.style.use("Solarize_Light2")
 
 plt.show()
 
+# DataFrame in eine CSV-Datei schreiben
+temp_csv_file = 'Umsatzdaten.csv'
+df_2023.round(2).to_csv(temp_csv_file, index=False)
+
+# Verbindung zur MySQL-Datenbank erstellen
+engine = create_engine('mysql+mysqlconnector://root:Deusen123!hallo@localhost/RT')
+
+# CSV-Datei in die MySQL-Datenbank schreiben
+with engine.connect() as connection:
+    myd = pd.read_csv(temp_csv_file)
+    myd.to_sql(name='umsatzvorhersage', con=connection, if_exists='replace', index=False)
